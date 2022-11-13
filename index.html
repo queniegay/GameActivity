@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/b18c33a7ee.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="title"><h1>ROCK PAPER SCISSORS GAME</h1></header>
+
+    <div class="scoreSection">
+        <h3 class="scoring" id="playerId">Player: </h3>
+        <h3 class="scoring" id="computerId">Computer: </h3>
+        <span class="scores" id="playerScore">0</span>:<span class="scores" id="computerScore">0</span>
+    </div>
+
+    <div class="resultSection"><h3 class="gameClass" id="resultId"></h3></div>
+
+    <div class="btnSection">
+        <span class="gameBtn" id="rockBtn"><img class="imgBtn" src="img/11.png" alt=""></span>
+        <span class="gameBtn" id="paperBtn"><img class="imgBtn" src="img/22.png" alt=""></span>
+        <span class="gameBtn" id="scissorsBtn"><img class="imgBtn" src="img/99.png" alt=""></span>
+    </div>
+
+    <div class="historySection" id="historySection" max="5"><h4>History:</h4></div>
+    <script src="js/script.js"></script>
+</body>
+</html>

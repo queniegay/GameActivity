@@ -1,0 +1,92 @@
+//select elements, declare variables
+const playerId = document.querySelector("#playerId");
+const computerId = document.querySelector("#computerId");
+const resultId = document.querySelector("#resultId");
+const gameBtn = document.querySelectorAll(".gameBtn");
+
+//select variables
+let player;
+let computer;
+let result;
+
+//for buttons
+gameBtn.forEach(button => button.addEventListener("click", () => {
+
+    //player's choice
+    player = button.textContent;
+    computerTurn();
+
+    playerId.textContent = `Player: ${player}`;
+    computerId.textContent = `Computer: ${computer}`;
+    resultId.textContent = theWinner();
+}));
+
+//computer's function
+function computerTurn() {
+    const randomNum = Math.floor(Math.random() * 3) + 1;
+
+    switch(randomNum) {
+        case 1:
+            computer = "ROCK";
+            break;
+        case 2:
+            computer = "PAPER";
+            break;
+        case 3:
+            computer = "SCISSORS";
+            break;
+    }
+}
+
+//result's function 
+function theWinner() {
+    if(player == computer) {
+        return "Draw!";
+    }
+    else if(computer == "ROCK") {
+        return (player == "PAPER") ? "You Win!" : "You Lose!"
+    }
+    else if(computer == "PAPER") {
+        return (player == "SCISSORS") ? "You Win!" : "You Lose!"
+    }
+    else if(computer == "SCISSORS") {
+        return (player == "ROCK") ? "You Win!" : "You Lose!"
+    }
+}
+
+
+
+//variables
+const resultScore = document.getElementById("resultId");
+const scoreSection = document.querySelector(".scoreSection");
+const resultSection = document.querySelector(".resultSection");
+
+const rockBtn = document.getElementById("rockBtn");
+const paperBtn = document.getElementById("paperBtn");
+const scissorsBtn = document.getElementById("scissorsBtn");
+
+rockBtn.addEventListener("click", choiceBtnSection);
+
+function choiceBtnSection() {
+    //btn actions
+    rockBtn.addEventListener("click", function() {
+        gameSection("Clicked Rock Action!");
+    })
+    paperBtn.addEventListener("click", function() {
+        gameSection("Clicked Paper Action!");
+    })
+    scissorsBtn.addEventListener("click", function() {
+        gameSection("Clicked Scissor Action!");
+    })
+}
+
+
+let count = newTodos.childElementCount;
+    if (count == 5) {
+        addBtn.setAttribute("disabled", "");
+        alert("You have reached the limit.");
+    }
+
+    scoring
+
+    
