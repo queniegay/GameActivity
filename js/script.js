@@ -21,6 +21,7 @@ function rockChoice() {
     let c = Math.floor(Math.random() * 3);
     let historyResults = document.createElement("h4");
     document.getElementById("computerId").textContent ="Computer: " + computerChoice[c];
+    document.getElementById("playerId").textContent ="Player: " + "Rock";
 
     gameBtn.forEach(button => button.addEventListener("click", () => {
         playerChoice = button.textContent;
@@ -58,6 +59,7 @@ function paperChoice() {
     let c = Math.floor(Math.random() * 3);
     let historyResults = document.createElement("h4");
     document.getElementById("computerId").textContent ="Computer: " + computerChoice[c];
+    document.getElementById("playerId").textContent ="Player: " + "Paper";
 
     if (c == 0) {
         resultId.innerHTML = "You win!";
@@ -91,9 +93,11 @@ function scissorsChoice() {
     let c = Math.floor(Math.random() * 3);
     let historyResults = document.createElement("h4");
     document.getElementById("computerId").textContent ="Computer: " + computerChoice[c];
+    document.getElementById("playerId").textContent ="Player: " + "Scissors";
 
     if (c == 0) {
         resultId.innerHTML = "You lose!";
+
         historyResults.textContent = "Scissors vs. Rock";
         historyResults.style.color = "red";
         historySection.appendChild(historyResults);
@@ -115,6 +119,7 @@ function scissorsChoice() {
         historyResults.textContent = "Scissors vs. Scissors";
         historySection.appendChild(historyResults);
     }
+
 }
 //------End Scissors Function------
 
